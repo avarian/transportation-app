@@ -9,7 +9,7 @@ services:
       - "8000:8000"
     volumes:
       - ".:/build"
-      - "/build/node_modules"
+      - "./node_modules:/build/node_modules"
     stdin_open: true
     tty: true
 
