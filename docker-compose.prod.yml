@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  transportation:
+    container_name: transportation-app
+    image: ghcr.io/avarian/transportation-app:latest
+    ports:
+      - "${LISTEN_PORT:-8000}:8000"
+    restart: unless-stopped
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+networks:
+  default:
+    driver: bridge
