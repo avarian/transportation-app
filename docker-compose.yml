@@ -8,8 +8,8 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - ".:/app"
-      - "/app/node_modules"
+      - ".:/build"
+      - "/build/node_modules"
     stdin_open: true
     tty: true
 
