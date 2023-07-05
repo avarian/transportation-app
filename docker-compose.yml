@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8000:8000"
+      - "8000:80"
     volumes:
       - ".:/build"
       - "./node_modules:/build/node_modules"
