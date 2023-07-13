@@ -13,7 +13,8 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/kai" element={<Kai />} />
+            <Route path="/kai/:trainSlug" element={<Kai />} />
+            <Route path="/kai" element={<Navigate to="/kai/serayu" />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </BrowserRouter>

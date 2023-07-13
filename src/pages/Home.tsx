@@ -5,11 +5,10 @@ function Home() {
         <div className="p-5 mb-4 bg-light rounded-3">
           <div className="container-fluid py-5">
             <h1 className="display-5 fw-bold">My Namus</h1>
+            <p className="col-md-8 fs-4">Sahabat Perjalanan Anda.</p>
             <p className="col-md-8 fs-4">
-              Using a series of utilities, you can create this jumbotron, just
-              like the one in previous versions of Bootstrap. Check out the
-              examples below for how you can remix and restyle it to your
-              liking.
+              Perjalanan akan semakin mudah ditemani dengan kenikmatan,
+              kemudahan Teknologi
             </p>
           </div>
         </div>
@@ -18,11 +17,7 @@ function Home() {
           <div className="col-md-6">
             <div className="h-100 p-5 text-white bg-dark rounded-3">
               <h2>Kai Train</h2>
-              <p>
-                Swap the background-color utility and add a `.text-*` color
-                utility to mix up the jumbotron look. Then, mix and match with
-                additional component themes and more.
-              </p>
+              <p>Perjalanan kereta api indonesia yang dimuat dengan menarik</p>
               <a className="btn btn-outline-light" type="button" href="/kai">
                 Explore
               </a>
