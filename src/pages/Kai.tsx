@@ -9,6 +9,18 @@ function Kai() {
   const query = useQuery();
   const dateQuery = query.get("date");
   const { trainSlug } = useParams();
+
+  interface DataTrain {
+    id: number;
+    code: string;
+    name: string;
+  }
+  
+  interface GetTrains {
+    data: DataTrain[];
+    message: string;
+  }
+
   const [trains, setTrains] = useState([]);
 
   // console.log(date);
