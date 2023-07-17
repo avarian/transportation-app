@@ -47,7 +47,7 @@ function Kai() {
               <div className="col-auto">
                 <div className="float-right">
                   <select className="form-select" aria-label="Kereta Api">
-                    <option selected>{train}</option>
+                    <option value={train}>{train}</option>
                     {trains.map((train) => (
                       <option key={train.id} value={train.id}>
                         {train.name}
