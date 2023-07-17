@@ -21,7 +21,7 @@ function Kai() {
     message: string;
   }
 
-  const [trains, setTrains] = useState([]);
+  const [trains, setTrains] = useState<GetTrains>([]);
 
   // console.log(date);
 
