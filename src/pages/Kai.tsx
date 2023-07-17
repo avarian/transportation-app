@@ -28,169 +28,222 @@ function Kai() {
   return (
     <main className="container">
       <div className="d-flex align-items-center p-3 my-3 bg-red rounded shadow-sm">
-        <div className="lh-1">
-          <h1 className="h6 mb-0 lh-1">Bootstrap</h1>
+        <div className="container">
+          <div className="col-auto float-start">
+            <h1 className="h4 mb-0 lh-1">Serayu</h1>
+          </div>
+          <div className="col-auto float-end">
+            <div className="row g-2">
+              <div className="col-auto">
+                <div className="float-right">
+                  <select className="form-select" aria-label="Kereta Api">
+                    <option value="1" selected>
+                      Pilih Kereta Api
+                    </option>
+                    <option value="1">Serayu</option>
+                    <option value="2">Argo</option>
+                    <option value="3">Jaya</option>
+                    <option value="4">
+                      Ini Lebih Panjang dari yang pernah ada
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div className="col-auto">
+                <div className="float-right">
+                  <input
+                    className="form-control"
+                    type="date"
+                    // name="begin"
+                    // placeholder="dd-mm-yyyy"
+                    // min="1997-01-01"
+                    // max="2030-12-31"
+                  />
+                </div>
+              </div>
+              <div className="col-auto">
+                <div className="float-right">
+                  <button type="submit" className="btn btn-primary">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      className="bi bi-search"
+                      viewBox="0 0 16 16"
+                    >
+                      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       <div className="my-3 p-3 bg-body rounded shadow-sm">
-        <h6 className="border-bottom pb-2 mb-0">Recent updates</h6>
-        <div className="d-flex text-body-secondary pt-3">
-          <svg
-            className="bd-placeholder-img flex-shrink-0 me-2 rounded"
-            width="32"
-            height="32"
-            xmlns="http://www.w3.org/2000/svg"
-            role="img"
-            aria-label="Placeholder: 32x32"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-          >
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#007bff" />
-            <text x="50%" y="50%" fill="#007bff" dy=".3em">
-              32x32
-            </text>
-          </svg>
-          <p className="pb-3 mb-0 small lh-sm border-bottom">
-            <strong className="d-block text-gray-dark">@username</strong>
-            Some representative placeholder content, with some information about
-            this user. Imagine this being some sort of status update, perhaps?
+        <h6 className="border-bottom pb-2 mb-0">Summary</h6>
+        <div className="text-body-secondary pt-3">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
           </p>
         </div>
-        <div className="d-flex text-body-secondary pt-3">
-          <svg
-            className="bd-placeholder-img flex-shrink-0 me-2 rounded"
-            width="32"
-            height="32"
-            xmlns="http://www.w3.org/2000/svg"
-            role="img"
-            aria-label="Placeholder: 32x32"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-          >
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#e83e8c" />
-            <text x="50%" y="50%" fill="#e83e8c" dy=".3em">
-              32x32
-            </text>
-          </svg>
-          <p className="pb-3 mb-0 small lh-sm border-bottom">
-            <strong className="d-block text-gray-dark">@username</strong>
-            Some more representative placeholder content, related to this other
-            user. Another status update, perhaps.
-          </p>
-        </div>
-        <div className="d-flex text-body-secondary pt-3">
-          <svg
-            className="bd-placeholder-img flex-shrink-0 me-2 rounded"
-            width="32"
-            height="32"
-            xmlns="http://www.w3.org/2000/svg"
-            role="img"
-            aria-label="Placeholder: 32x32"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-          >
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#6f42c1" />
-            <text x="50%" y="50%" fill="#6f42c1" dy=".3em">
-              32x32
-            </text>
-          </svg>
-          <p className="pb-3 mb-0 small lh-sm border-bottom">
-            <strong className="d-block text-gray-dark">@username</strong>
-            This user also gets some representative placeholder content. Maybe
-            they did something interesting, and you really want to highlight
-            this in the recent updates.
-          </p>
-        </div>
-        <small className="d-block text-end mt-3">
-          <a href="#">All updates</a>
-        </small>
       </div>
 
-      <div className="my-3 p-3 bg-body rounded shadow-sm">
-        <h6 className="border-bottom pb-2 mb-0">Suggestions</h6>
-        <div className="d-flex text-body-secondary pt-3">
-          <svg
-            className="bd-placeholder-img flex-shrink-0 me-2 rounded"
-            width="32"
-            height="32"
-            xmlns="http://www.w3.org/2000/svg"
-            role="img"
-            aria-label="Placeholder: 32x32"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-          >
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#007bff" />
-            <text x="50%" y="50%" fill="#007bff" dy=".3em">
-              32x32
-            </text>
-          </svg>
-          <div className="pb-3 mb-0 small lh-sm border-bottom w-100">
-            <div className="d-flex justify-content-between">
-              <strong className="text-gray-dark">Full Name</strong>
-              <a href="#">Follow</a>
-            </div>
-            <span className="d-block">@username</span>
+      <div className="container my-3 p-3 bg-body rounded shadow-sm">
+        <h6 className="border-bottom pb-2 mb-0">Schedule</h6>
+        <div className="row">
+          <div className="col-md-3 text-center float-right">
+            <h4>Serayu (104)</h4>
+            <table className="table table-success table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Station</th>
+                  <th scope="col">Arrival</th>
+                  <th scope="col">Departure</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>19:00</td>
+                  <td>19:08</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>19:00</td>
+                  <td>19:08</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>19:00</td>
+                  <td>19:08</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="col-md-3 text-center float-right">
+            <h4>Serayu (104)</h4>
+            <table className="table table-success table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Station</th>
+                  <th scope="col">Arrival</th>
+                  <th scope="col">Departure</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>19:00</td>
+                  <td>19:08</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>19:00</td>
+                  <td>19:08</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>19:00</td>
+                  <td>19:08</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="col-md-3 text-center float-right">
+            <h4>Serayu (104)</h4>
+            <table className="table table-success table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Station</th>
+                  <th scope="col">Arrival</th>
+                  <th scope="col">Departure</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>19:00</td>
+                  <td>19:08</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>19:00</td>
+                  <td>19:08</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>19:00</td>
+                  <td>19:08</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="col-md-3 text-center float-right">
+            <h4>Serayu (104)</h4>
+            <table className="table table-success table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Station</th>
+                  <th scope="col">Arrival</th>
+                  <th scope="col">Departure</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>19:00</td>
+                  <td>19:08</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>19:00</td>
+                  <td>19:08</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>19:00</td>
+                  <td>19:08</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
-        <div className="d-flex text-body-secondary pt-3">
-          <svg
-            className="bd-placeholder-img flex-shrink-0 me-2 rounded"
-            width="32"
-            height="32"
-            xmlns="http://www.w3.org/2000/svg"
-            role="img"
-            aria-label="Placeholder: 32x32"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-          >
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#007bff" />
-            <text x="50%" y="50%" fill="#007bff" dy=".3em">
-              32x32
-            </text>
-          </svg>
-          <div className="pb-3 mb-0 small lh-sm border-bottom w-100">
-            <div className="d-flex justify-content-between">
-              <strong className="text-gray-dark">Full Name</strong>
-              <a href="#">Follow</a>
-            </div>
-            <span className="d-block">@username</span>
-          </div>
-        </div>
-        <div className="d-flex text-body-secondary pt-3">
-          <svg
-            className="bd-placeholder-img flex-shrink-0 me-2 rounded"
-            width="32"
-            height="32"
-            xmlns="http://www.w3.org/2000/svg"
-            role="img"
-            aria-label="Placeholder: 32x32"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-          >
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#007bff" />
-            <text x="50%" y="50%" fill="#007bff" dy=".3em">
-              32x32
-            </text>
-          </svg>
-          <div className="pb-3 mb-0 small lh-sm border-bottom w-100">
-            <div className="d-flex justify-content-between">
-              <strong className="text-gray-dark">Full Name</strong>
-              <a href="#">Follow</a>
-            </div>
-            <span className="d-block">@username</span>
-          </div>
-        </div>
-        <small className="d-block text-end mt-3">
-          <a href="#">All suggestions</a>
-        </small>
       </div>
+
       <div>
         {/* {trains.map((train) => (
         <div key={train.id}>
