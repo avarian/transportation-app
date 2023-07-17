@@ -4,12 +4,22 @@ import { useLocation, useParams } from "react-router-dom";
 import { API_URL } from "../utils/constant";
 
 function Kai() {
-  const { search } = useLocation();
+  let date = new Date(Date.now());
+  const useQuery = () => new URLSearchParams(useLocation().search);
+  const query = useQuery();
+  const dateQuery = query.get("date");
   const { trainSlug } = useParams();
   const [trains, setTrains] = useState([]);
 
+  // console.log(date);
+
   let train = trainSlug?.replace("-", " ").toUpperCase();
-  console.log(search);
+
+  if (dateQuery != null) {
+    date = new Date(dateQuery);
+  }
+
+  console.log(dateQuery);
   console.log(train);
   // the search result
   // const [foundTrains, setFoundTrains] = useState(TRAINS);
@@ -30,22 +40,19 @@ function Kai() {
       <div className="d-flex align-items-center p-3 my-3 bg-red rounded shadow-sm">
         <div className="container">
           <div className="col-auto float-start">
-            <h1 className="h4 mb-0 lh-1">Serayu</h1>
+            <h1 className="h4">{train}</h1>
           </div>
           <div className="col-auto float-end">
             <div className="row g-2">
               <div className="col-auto">
                 <div className="float-right">
                   <select className="form-select" aria-label="Kereta Api">
-                    <option value="1" selected>
-                      Pilih Kereta Api
-                    </option>
-                    <option value="1">Serayu</option>
-                    <option value="2">Argo</option>
-                    <option value="3">Jaya</option>
-                    <option value="4">
-                      Ini Lebih Panjang dari yang pernah ada
-                    </option>
+                    <option selected>{train}</option>
+                    {trains.map((train) => (
+                      <option key={train.id} value={train.id}>
+                        {train.name}
+                      </option>
+                    ))}
                   </select>
                 </div>
               </div>
@@ -54,8 +61,9 @@ function Kai() {
                   <input
                     className="form-control"
                     type="date"
+                    defaultValue={date.toISOString().slice(0, 10)}
                     // name="begin"
-                    // placeholder="dd-mm-yyyy"
+                    placeholder="yyyy-mm-dd"
                     // min="1997-01-01"
                     // max="2030-12-31"
                   />
