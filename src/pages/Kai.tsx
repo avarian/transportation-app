@@ -15,13 +15,8 @@ function Kai() {
     code: string;
     name: string;
   }
-  
-  interface GetTrains {
-    data: DataTrain[];
-    message: string;
-  }
 
-  const [trains, setTrains] = useState<GetTrains>([]);
+  const [trains, setTrains] = useState<Array<DataTrain>>([]);
 
   // console.log(date);
 
