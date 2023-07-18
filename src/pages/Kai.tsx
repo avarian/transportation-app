@@ -180,7 +180,15 @@ function Kai() {
         <h6 className="border-bottom pb-2 mb-0">Summary</h6>
         <div className="text-body-secondary pt-3">
           {trainsSchedules[0]?.description != "" ? (
-            <div>{trainsSchedules[0]?.description}</div>
+            <div>
+              {
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: trainsSchedules[0]?.description,
+                  }}
+                />
+              }
+            </div>
           ) : (
             <div>
               <p>
