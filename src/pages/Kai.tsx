@@ -177,7 +177,7 @@ function Kai() {
       </div>
 
       <div className="my-3 p-3 bg-body rounded shadow-sm">
-        <h6 className="border-bottom pb-2 mb-0">Summary</h6>
+        <h6 className="border-bottom pb-2 mb-0">Ikhtisar</h6>
         <div className="text-body-secondary pt-3">
           {trainsSchedules[0]?.description != "" ? (
             <div>
@@ -215,7 +215,12 @@ function Kai() {
       </div>
 
       <div className="container my-3 p-3 bg-body rounded shadow-sm">
-        <h6 className="border-bottom pb-2 mb-0">Schedule</h6>
+        <h6
+          style={{ textTransform: "capitalize" }}
+          className="border-bottom pb-2 mb-0"
+        >
+          Jadwal Kereta Api {train}
+        </h6>
         <div className="row">
           {trainsSchedules.map((trainsSchedule) => (
             <div
