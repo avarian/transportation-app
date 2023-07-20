@@ -221,15 +221,16 @@ function Kai() {
         >
           Jadwal Kereta Api {train}
         </h6>
+        <br />
         <div className="row">
           {trainsSchedules.map((trainsSchedule) => (
             <div
               key={trainsSchedule.code}
               className="col-md-4 text-center float-right"
             >
-              <h4>
+              <h6>
                 {trainsSchedule.name} ({trainsSchedule.code})
-              </h4>
+              </h6>
               <table className="table table-success table-striped">
                 <thead>
                   <tr>
