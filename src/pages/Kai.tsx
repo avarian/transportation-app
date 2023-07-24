@@ -50,7 +50,7 @@ function Kai() {
     Array<DataTrainSchedule>
   >([]);
 
-  let train = trainSlug?.replace("-", " ").toLowerCase();
+  let train = trainSlug?.replace(/-/gi, " ").toLowerCase();
 
   if (dateQuery != null) {
     date = new Date(dateQuery);
@@ -73,7 +73,7 @@ function Kai() {
   const handleSubmit = () => {
     let path =
       "/kai/" +
-      trainForm?.replace(" ", "-").toLowerCase() +
+      trainForm?.replace(/ /gi, "-").toLowerCase() +
       "?date=" +
       dateForm;
     navigate(path);
@@ -95,7 +95,7 @@ function Kai() {
         API_URL +
           "/kai/train-schedule" +
           "?train=" +
-          trainForm?.replace(" ", "-").toLowerCase() +
+          trainForm?.replace(/ /gi, "-").toLowerCase() +
           "&date=" +
           dateForm
       )
@@ -119,18 +119,14 @@ function Kai() {
               <div className="col-auto">
                 <div className="float-right">
                   <select
+                    style={{ textTransform: "capitalize" }}
                     onChange={handleTrainFormChange}
                     className="form-select"
                     aria-label="Kereta Api"
                   >
-                    <option
-                      style={{ textTransform: "capitalize" }}
-                      value={trainForm}
-                    >
-                      {train}
-                    </option>
+                    <option key={train}>{train}</option>
                     {trains.map((train) => (
-                      <option key={train.id} value={train.name}>
+                      <option key={train.name} value={train.name}>
                         {train.name}
                       </option>
                     ))}
@@ -259,6 +255,25 @@ function Kai() {
                   </tbody>
                 )}
               </table>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="container my-3 p-3 bg-body rounded shadow-sm">
+        <h6
+          style={{ textTransform: "capitalize" }}
+          className="border-bottom pb-2 mb-0"
+        >
+          Lihat Juga
+        </h6>
+        <br />
+        <div className="row">
+          {trains.map((train) => (
+            <div className="col-md-3 text-center float-right" key={train.name}>
+              <a href={"/kai/" + train.name.replace(/ /gi, "-").toLowerCase()}>
+                {train.name}
+              </a>
             </div>
           ))}
         </div>
