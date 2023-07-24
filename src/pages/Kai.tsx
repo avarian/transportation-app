@@ -56,6 +56,12 @@ function Kai() {
     date = new Date(dateQuery);
   }
 
+  const dateIndo = date.toLocaleDateString("id-ID", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+
   const [trainForm, setTrainForm] = useState(train);
 
   const handleTrainFormChange = (
@@ -79,6 +85,17 @@ function Kai() {
     navigate(path);
     window.location.reload();
   };
+
+  useEffect(() => {
+    document.title =
+      "Jadwal Kereta Api " +
+      trainForm?.replace(/(^\w{1})|(\s+\w{1})/g, (letter) =>
+        letter.toUpperCase()
+      ) +
+      " " +
+      dateIndo +
+      " | Myanamus";
+  }, []);
 
   useEffect(() => {
     axios
@@ -215,7 +232,7 @@ function Kai() {
           style={{ textTransform: "capitalize" }}
           className="border-bottom pb-2 mb-0"
         >
-          Jadwal Kereta Api {train}
+          Jadwal Kereta Api {train} {dateIndo}
         </h6>
         <br />
         <div className="row">
